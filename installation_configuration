@@ -1,0 +1,52 @@
+source
+https://youtu.be/peH95b16hNI
+
+https://jhooq.com/prometheous-grafan-setup/
+
+
+install prometheus and node ecporter on single node,
+
+create dir prometheus
+if we install prometheus and node exporter on 2 diff servers use 
+http://43.207.199.144:9090/metrics to verify the connection
+
+vi exporter-config.yml to join other nodes to the prometheus
+
+
+exporter-config.yml
+
+scrap_interval = 15s
+
+export PS1='$ '
+
+./prometheus --config.file=exporter-config.yml
+
+install node Exporter on other nodes and start the node exporter
+
+http://43.207.199.144:9100/
+
+
+exporter-config.yml
+
+scrap_interval = 15s
+
+export PS1='$ '
+.................................................................................
+
+install Grafana
+
+Grafana (dashboard)
+
+http://43.207.199.144:3000/login
+
+Dashboard (use promitioes data soure)
+Adminstration DataSources promithoes   	 
+
+http://localhost:9090 
+
+save and test
+
+dashboard create
+
+https://grafana.com/grafana/dashboards/2747-linux-memory/
+2747
